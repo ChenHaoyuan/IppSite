@@ -237,3 +237,7 @@ hr.small {
 footer {
     padding: 100px 0;
 }
+
+* {
+font-family: "Open Sans", "HelveticaNeue-Light Light", Arial, Helvetica, "Lucida Grande", "Microsoft Yahei";
+}

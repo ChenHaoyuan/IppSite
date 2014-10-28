@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>I++ salon list</title>
+
+<!-- Bootstrap Core CSS -->
+<link href="/extern/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="/css/stylish-portfolio.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<link href="/extern/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<!-- <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css"> -->
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<style type="text/css">
+.list-group-item > .right-comment {
+    float: right;
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">主页</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<!--       <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+ -->
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">用户设置 <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">登出</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<div class="page-header col-lg-6 col-lg-offset-3 text-center">
+  <h1>I++ Club 沙龙列表</h1>
+  <h2><small>在这里你可以看到I++之前举办的每次主题沙龙的具体内容</small></h2>
+</div>
+
+<div id="salon-list" class="col-lg-6 col-lg-offset-3">
+    <div class="list-group">
+      <a class="list-group-item active disabled">沙龙主题<span class="right-comment">阅读次数</span></a>
+      <a href="/salon/view/" class="list-group-item">Git + Github<span class="badge">14</span></a>
+      <a href="/salon/view/" class="list-group-item">Java Web 开发<span class="badge">1</span></a>
+      <a href="/salon/view/" class="list-group-item">Android 开发<span class="badge">2</span></a>
+      <a href="/salon/view/" class="list-group-item">Web 响应式前端<span class="badge">3</span></a>
+    </div>
+</div>
+
+<script src="/extern/jquery-1.11.0.js"></script>
+<script src="/extern/bootstrap.min.js"></script>
+</body>
+</html>
