@@ -1,7 +1,6 @@
 IppSite
 =======
 
-
 Copyright (c) 2014 [Ipp Club](http://ippclub.github.io) All rights reserved.
 
 About
@@ -13,7 +12,13 @@ Contribute Constrains
 -----
 
 You should start your own branch after your fork action. 
-    - Then develop on your own branch.
-    - Send pull request to the repo to finish your contribution.
-    - You will accept message after the master merge your code or not.
+ - Then develop on your own branch.
+ - Send pull request to the repo to finish your contribution.
+ - You will accept message after the master merge your code or not.
 
+Installation
+-----
+
+ - Install Node.js, npm.
+ - Run `npm install` in project folder.
+ - Run `grunt` for debugging.

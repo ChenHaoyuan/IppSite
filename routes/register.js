@@ -1,8 +1,9 @@
-var express = require('express');
-var router = express.Router();
+module.exports.load = function(req, res, next)
+{
+	return {};
+};
 
-router.get('/', function(req, res) {
-  res.render('register');
-});
-
-module.exports = router;
+module.exports.events =
+{
+	
+};
