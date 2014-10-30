@@ -24,7 +24,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //app.use(expressSession({secret: credentials.sessionSecret, resave: false, saveUninitialized: true, store: new MongoStore({url: connectionString})}));
 app.use(express.static(path.join(__dirname, 'public')));
 
-var pageEvents = {}
 for (var route in routes)
 {
 	var controllerFile = '/routes/' + route + '.js';
@@ -36,7 +35,7 @@ for (var route in routes)
 		var controller = require('.' + controllerFile);
 		var load = controller.load;
 		var events = controller.events;
-		(function(path,load,route){
+		(function(path,load,route){//capture path,load,route with closure
 			if (hasView)
 			{
 				app.get(path, function(req, res, next)
@@ -53,26 +52,17 @@ for (var route in routes)
 			for (var name in events)
 			{
 				emitter.on(name, events[name]);
-				app.post("/:event?", function(req, res, next)
+			}
+			(function(emitter){//capture emitter with closure
+				app.post((path != "/" ? path : "") + "/:event?", function(req, res, next)
 				{
 					var eventName = req.query.event;
-					if (eventName)
-					{
-						emitter.emit(eventName, req, res, next);
-					}
-					else
-					{
-						var err = new Error("Unhandled POST request");
-						err.status = 404;
-						next(err);
-					}
+					emitter.emit(eventName, req, res, next);
 				});
-			}
-			pageEvents[route] = emitter;
+			})(emitter);
 		}
 	}
 }
-app.pageEvents = pageEvents;
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
