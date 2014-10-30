@@ -36,20 +36,17 @@ for (var route in routes)
 		var controller = require('.' + controllerFile);
 		var load = controller.load;
 		var events = controller.events;
-		(function(){
-			var _path = path;
-			var _load = load;
-			var _route = route;
+		(function(path,load,route){
 			if (hasView)
 			{
-				app.get(_path, function(req, res, next)
+				app.get(path, function(req, res, next)
 				{
-					var env = _load(req, res, next);
-					res.render(_route, env);
+					var env = load(req, res, next);
+					res.render(route, env);
 				});
 			}
-			else app.get(_path, _load);
-		})();
+			else app.get(path, load);
+		})(path,load,route);
 		if (events)
 		{
 			var emitter = new EventEmitter();
