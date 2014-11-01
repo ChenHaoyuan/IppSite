@@ -23,4 +23,4 @@ Installation
  - Run `npm install` in project folder.
  - Run `grunt` for debugging.
 
- This is a test, ~~
+ This is a test, chen hao yuan
